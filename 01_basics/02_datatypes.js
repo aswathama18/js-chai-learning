@@ -16,7 +16,7 @@ let isLoggedIn = false
 //bigInt 
 // string => ""
 // bolean => false or true 
-// null => stand alone value 
+// null => stand alone value / DATATYPE OF NULL = OBJECT 
 // undefined =>
 // // symbol => uniqueness 
 
