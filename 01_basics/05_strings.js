@@ -4,7 +4,7 @@ const age = "102"
 // console.log(name + age +  Context ) // old method of concatention of strings 
 console.log(`hello my name is ${name} and i am ${age} old.`);
 
-const gameName = new String(`hukum ka samrajya`)
+const gameName = new String(`hukum-is-the-king`)
 
 // console.log(gameName[2]);
 // console.log(gameName.__proto__);
@@ -18,4 +18,16 @@ const newString = gameName.substring(0,7)
 // console.log(newString);
 
 const anotherString = gameName.slice(-7, -3)
-console.log(anotherString);
+// console.log(anotherString);
+
+const newString1 = "     umylove      "
+// console.log(newString1);
+// console.log(newString1.trim()); //trim used to remove extra whitespaces from a string 
+
+const url = "https://hukum.com/hukum%20chaudhary"
+
+// console.log(url.replace('%20', '_'));
+
+// console.log(url.includes('hukum'));
+
+console.log(gameName.split("")[4]);
