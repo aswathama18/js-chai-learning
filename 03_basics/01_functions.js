@@ -44,6 +44,39 @@ logInUserMessage("Hukum")
 //NOW IT WILL GIVE OUTPUT
 // console.log(logInUserMessage("Hukum"));
 
-console.log(logInUserMessage());
+// console.log(logInUserMessage());
 //no argument passed will give undefined
 
+// function calculate_cart_price(...num1){ //rest operator helps to pass multiple parameters to function
+function calculate_cart_price(val1, val2, ...num1){
+    return num1 // rest operator makes an array of the multiple values
+}
+
+// console.log(calculate_cart_price(200, 400, 500, 890, 6768));
+// expected output -> [ 500, 890, 6768 ] val1, and val2 has been assigned the first two values and num1 array collect all other 
+
+const user = {
+    username: 'Hukum',
+    price : 199
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and Price is ${anyObject.price}`);
+    
+}
+
+// handleObject(user)
+// handleObject(
+//     {
+//         username : "ALex",
+//         price : 9890
+//     }
+// )
+const myNewArray = [200, 400, 5999]
+
+
+function secondValue(getArray){
+    return getArray[1]
+}
+
+console.log(secondValue(myNewArray));
