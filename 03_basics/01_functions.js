@@ -32,22 +32,25 @@ function logInUserMessage(username){
     // if(username === undefined){
     if(!username){
         console.log("Please enter a username");
-        return // is no username loop start this return will stop the function further by return nothing
+        return // if no username loop start, this return will stop the function further by return nothing
     }
     return `${username} just logged in`
+    // return Doesn't ENSURE that the value will be printed 
+    // it just returns the value , hence no OUTPUT
 }
 
 logInUserMessage("Hukum")
-// return Doesn't ENSURE that the value will be printed 
-// it just returns the value , hence no OUTPUT
+// otpit -> Hukum just logged in
 
 //NOW IT WILL GIVE OUTPUT
-// console.log(logInUserMessage("Hukum"));
+console.log(logInUserMessage("Hukum"));
 
 // console.log(logInUserMessage());
 //no argument passed will give undefined
 
-// function calculate_cart_price(...num1){ //rest operator helps to pass multiple parameters to function
+
+// HANDLING MULTIPLE PARAMETERS (CART Problem)
+// function calculate_cart_price(...num1){ // (____Rest operator___)...num1 helps to pass multiple parameters to function
 function calculate_cart_price(val1, val2, ...num1){
     return num1 // rest operator makes an array of the multiple values
 }
