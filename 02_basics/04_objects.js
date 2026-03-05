@@ -60,12 +60,32 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isloggedIn'));
+// console.log(tinderUser.hasOwnProperty('isloggedIn'));
 
+//DE-STRUCTURING
+const course = {
+    coursename : "js in Hindi",
+    courserice : "989",
+    courseteacher : "hitesh"
+}
+
+// const {courseteacher: ins} = course
+console.log(ins);
+/* example of destructuring in React
+const navbar = ({company}) => {
+
+}
+navbar(company = "hitesh")*/
+
+// {
+//     "name" : "Nikhil",
+//     "coursename" : "jas in hindi",
+//     "price" : "free"
+// }
 
