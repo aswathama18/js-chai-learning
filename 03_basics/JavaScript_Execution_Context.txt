@@ -1,0 +1,44 @@
+Javascript Execution Context
+        _____
+Block  |     |
+ of  = | { } | ←  Global EC 
+code   |_____|            ↳    `this`  variable is assigned to it  
+
+      ↳ Global Execution Context
+      ↳ Function Execution Context
+      ↳ Eval Execution Context
+       ______
+       |     |
+       | { } | -> Memory Creation Phase
+       |_____| -> Execution Phase
+
+       
+1. Global Execution
+          ↓           ___________CODE-BOX__{}_____________
+         this        |                                    |
+                     | 1 let val1 = 10                    |
+                     | 2 let val2 = 5                     |
+                     | 3 function addNum (num1, num2) {   |
+                     | 4 let total num1 +num2             |
+                     | 5 return total                     |
+                     | 6 }                                |
+                     | 7 let result1 addNum (val1, val2)  |
+                     | 8 let result2 addNum(10, 2)        |
+                     |____________________________________|
+2. Memory Phase                        
+   Vall -> undefined                      
+   val -> undefined
+   add num -> defination           
+   result1 -> undefined
+   result2 -> undefined
+
+3. Execution Phase
+   val1 <- 10
+   val2 <- 20    _______________
+   addNum ----> |               |
+                |  NEW variable |   <---- //New executional Context
+                |  Environment  |
+                |      +        |
+                |  Execution    |
+                |     Thread    |
+                |_______________|
