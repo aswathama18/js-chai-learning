@@ -8,6 +8,9 @@ const temperature = 48
 //     }
 
 // console.log("executed");
+//
+console.log("Execute");
+//<, >, <=, >=, ==, !=, ===, !==
 
 const score = 200
 

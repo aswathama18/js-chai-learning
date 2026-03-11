@@ -7,6 +7,9 @@ const useremail = []
 // else {
 //     console.log("dont have email");
 // }
+//
+
+
 
 // falsy values 
 // false , 0, -0, BigInt 0n, "", null, undefined, NaN
@@ -25,7 +28,16 @@ if (Object.keys(emptyObject).length === 0) {       //Object.keys(emptyObject) it
 let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10
-val1 = undefined ?? 15
-
+// val1 = undefined ?? 15
+val1 = null ?? 10 ?? 20 // callback when error occurs 
 
 console.log(val1);
+
+// terniary Operator
+
+// condition ? true : false
+
+const iceteaprice = 200
+iceteaprice <= 90 ? console.log("less tham 90") : console.log
+("more than 100");
+ 
