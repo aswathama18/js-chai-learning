@@ -28,8 +28,23 @@ const score = 200
 // console.log(`user power : ${power}`);
 // OUTPUT ->user power : fly
 
-const balance = 1000
+// const balance = 1000
 
-if (balance >500) console.log("test"); //implicit scope
+// if (balance >500) console.log("test"); //implicit scope
 
-//https://youtu.be/0P_YvC6Gg0c?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=1022
+const userLoggedIn = true
+const DebitCard = true
+const LoggedInFromGoogle = false
+const LoggedInFromEmail = true 
+ if (userLoggedIn && DebitCard) {
+    console.log("Allow to buy course");
+        
+ }
+ if (LoggedInFromEmail || LoggedInFromGoogle) {
+    console.log("user logged in");
+    
+ } 
+ else {
+    console.log("you must have a credit card and logged in");
+    
+ }
