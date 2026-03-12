@@ -50,7 +50,7 @@ const chai =() => {
 
 // const addTWo = (num1, num2) =>  num1 + num2                //Implicit arrow function 
 // const addTWo = (num1, num2) =>  (num1 + num2 )             // doesn't need return keyword in parantheses
-const addTWo = (num1, num2) =>  ({username : "Hukum"})        //even to return an object in Implcit arrow function u must use parantheses 
+// const addTWo = (num1, num2) =>  ({username : "Hukum"})        //even to return an object in Implcit arrow function u must use parantheses 
 
 
 console.log(addTWo(3,4));
