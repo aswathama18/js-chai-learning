@@ -5,7 +5,7 @@
 
 # Solution code
 
-## project 1 soloution
+## project 1 solution
 
 ```javascript
 console.log("Hello")
@@ -43,7 +43,7 @@ buttons.forEach( (button)=> {
 
 ```
 
-## project 2 soloution
+## project 2 solution
 ```javascript
 const form = document.querySelector('form')
 // this use-case will give empty values 
@@ -70,4 +70,16 @@ form.addEventListener('submit', (e)=> {
   }
 
 })
+```
+
+## project 3 solution
+```javascript
+const clock = document.getElementById('clock')
+
+setInterval(function(){
+  let date = new Date()
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000)
+
 ```
