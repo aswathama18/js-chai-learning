@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Center everything inside the parent container */
+.page-container {
+  display: flex;                  
+  justify-content: center;           
+  align-items: center;             
+  min-height: 100vh;               
+}
+
+/* Optional styling to make your span look like a button */
+.my-button {
+  padding: 100px 100px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;}
+
+#information {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+}
+
+</style>
+<body style="background-color: #f7f4f4;" >
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+<div class="page-container">
+  <span class="my-button">Click Me</span>
+</div>
+<div id = "information"></div>
+</body>
+<script>
+   const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+   const xhr = new XMLHttpRequest();
+   let followersCount = "Loading ...";
+   let avatarUrl = '';
+   let nameofCandidate = "";
+   xhr.open('GET', requestUrl); // to get data of api
+   xhr.onreadystatechange = function (){
+    // console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText) //the responded data is always in string
+        // console.log(data.followers);
+        followersCount = data.followers ;
+        avatarUrl = data.avatar_url ;
+        nameofCandidate = data.name ;
+
+    } 
+   }
+   xhr.send();
+   const button = document.querySelector('.my-button');
+   const image = 
+   button.addEventListener('click', function(e){
+    button.innerHTML = `
+    <div class="profile-card">
+            <img src="${avatarUrl}" alt="Profile Picture" class="profile-img" />
+            <p>Name: <span>${nameofCandidate}</span></p>
+            <p>Followers: <span>${followersCount}</span></p>
+        </div>`
+
+   })
+
+   
+</script>
+</html>
